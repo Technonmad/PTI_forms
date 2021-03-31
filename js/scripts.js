@@ -73,4 +73,3 @@ function date_time()
 
     return day+"."+month+"."+year+" "+current_day+" "+hours+":"+minutes+":"+seconds;
 }
-
