@@ -1,11 +1,31 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link href="styleform1.css" rel="stylesheet" type="text/css">
+		<link id="style" href="css/styleform1.css" rel="stylesheet" type="text/css">
 		<script src="./js/scripts.js"></script>
+		<script>
+			setTimeout(function(){window.location.reload(1); alert("Вам нужно заполнить форму за минуту!")}, 60000);
+		</script>
 		<script>
 			setInterval(function () {document.getElementById('current_date_time_block').innerHTML = date_time();}, 1000);
 		</script>
+		<script type="text/javascript">
+			var date = new Date();
+			var h = date.getHours();
+			if (h >= 4 && h < 12) document.getElementById("style").href = "css/stylemorning.css";
+			else
+			{
+				if (h >= 12 && h < 17) document.getElementById("style").href = "css/styleform1.css";
+				else
+				{
+					if (h >= 17) document.getElementById("style").href = "css/styleevening.css";
+					else
+					{
+						if (h = 0 && h < 4) document.getElementById("style").href = "css/stylenight.css";
+					}
+				}
+			}
+		  </script>
 	</head>
 	<body>
 	<div id="f1">	
@@ -31,7 +51,6 @@
 	</div>
 	<footer>
 		<div id="current_date_time_block"></div>
-		<div id="day_of_the_week"></div>
 	</footer>
 	</body>
 </html>
