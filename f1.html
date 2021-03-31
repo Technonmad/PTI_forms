@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="styleform1.css" rel="stylesheet" type="text/css">
+		<script src="./js/scripts.js"></script>
+		<script>
+			setInterval(function () {document.getElementById('current_date_time_block').innerHTML = date_time();}, 1000);
+		</script>
+	</head>
+	<body>
+	<div id="f1">	
+		<form name="f1" class="one">
+			<fieldset>
+				<legend>Просто формальность...</legend>
+				<span class="string">Введите имя
+				<input type="text" name="surname" placeholder="Бабабой" required>
+				<span class="string">Введите e-mail
+				<input type="email" name="email" placeholder="yansobakin@mail.ru">
+				<span class="string">Номер телефона
+				<input type="number" name="phone" placeholder="88005553535">
+				<span class="string">
+					<input type="checkbox" name="robot">
+					Я не робот
+				</span>
+			</fieldset>
+			<span class="string">
+				<input type="button" name="btn" value="Отправить" onclick="filledBoxes()">
+			</span>
+		</form>
+		<div id="box"></div>
+	</div>
+	<footer>
+		<div id="current_date_time_block"></div>
+		<div id="day_of_the_week"></div>
+	</footer>
+	</body>
+</html>
